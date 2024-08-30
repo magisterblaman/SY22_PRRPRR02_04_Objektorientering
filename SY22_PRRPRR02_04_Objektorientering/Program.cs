@@ -7,19 +7,22 @@ using System.Threading.Tasks;
 namespace SY22_PRRPRR02_04_Objektorientering {
 	internal class Program {
 		static void Main(string[] args) {
-			Circle circle1 = new Circle(5, 2.3, 5, "blue", "Josef");
-			Circle circle2 = new Circle(17, 10.5, 5.5, "red", "Martin");
+			Turtle turtle1 = new Turtle(22, "rosa", "Pinky");
 
-			Console.WriteLine("Före förändring:");
-			circle1.DrawSelf();
-			circle2.DrawSelf();
+			turtle1.PrintGreeting();
 
-			circle1.IncreaseSize(10);
-			circle2.DoubleSize();
+			Turtle turtle2 = new Turtle(turtle1.size, 
+				turtle1.color, 
+				turtle1.name);
 
-			Console.WriteLine("Efter förändring:");
-			circle1.DrawSelf();
-			circle2.DrawSelf();
+			turtle2.PrintGreeting();
+
+			Console.WriteLine("-------");
+
+			turtle1.size += 10;
+
+			turtle1.PrintGreeting();
+			turtle2.PrintGreeting();
 		}
 	}
 }
