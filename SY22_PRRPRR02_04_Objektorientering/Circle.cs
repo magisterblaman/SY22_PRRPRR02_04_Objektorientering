@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SY22_PRRPRR02_04_Objektorientering {
 	internal class Circle {
-		int radius;
-		double x;
-		double y;
-		string color;
-		string name;
+		public int radius;
+		public double x;
+		public double y;
+		public string color;
+		public string name;
 
 		public Circle(int inputRadius,
 			   double inputX,
